@@ -33,10 +33,6 @@ installed "terminator"
 installed "git"
 installed "vim"
 
-if has_not commands; then
-	echo "Doesn't have command"
-fi
-
 if has_not google-chrome-stable; then
 	wget -O chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 	sudo dpkg --force-depends -i chrome.deb
@@ -94,8 +90,17 @@ installed "Composer"
 
 
 if ! [[ -d "$HOME/.oh-my-zsh" ]]; then
-  installed -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 fi
+installed "OH my zsh"
+
+if has_not code; then
+  sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+  curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+  mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
+  sudo apt update
+  suso apt install code
+if
 
 # Clean up
 sudo apt-get autoclean -y
