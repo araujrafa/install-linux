@@ -37,6 +37,13 @@ sudo swapoff -a
 sudo swapon -a
 ```
 
+## Softwares e soluções encontradas
+
+**Ativar videos HTML5 MP4 no vivaldi**
+```console
+https://gist.github.com/ruario/bec42d156d30affef655#file-latest-proprietary-media-sh
+```
+
 ## License
 
 [MIT] Rafael Araujo
