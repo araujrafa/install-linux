@@ -37,6 +37,14 @@ sudo swapoff -a
 sudo swapon -a
 ```
 
+**Descobrir seu ip**
+```
+ip addr show
+...
+2: <BROADCAST, MULTICAST...>
+inet IP_NUMBER/
+```
+
 ## Softwares e soluções encontradas
 
 **Ativar videos HTML5 MP4 no vivaldi**
