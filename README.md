@@ -45,6 +45,12 @@ ip addr show
 inet IP_NUMBER/
 ```
 
+**Pesquisar com grep**
+```console
+comand | grep pesquisa
+ls -al | grep zsh
+```
+
 ## Softwares e soluções encontradas
 
 **Ativar videos HTML5 MP4 no vivaldi**
